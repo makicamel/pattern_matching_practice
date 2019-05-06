@@ -37,3 +37,12 @@ in [a]
 in a
   p a # => [0, [1, 2, 3]]
 end
+
+# ---
+# Hash
+case {a: 0, b: 1}
+in {a: 0, x: 1}
+  :unreachable
+in {a: 0, b: var}
+  p var # => 1
+end
